@@ -44,7 +44,7 @@ $(document).ready(function () {
     path.forEach((el) => {
       svgLinesTL.to(
         el,
-        8,
+        3,
         {
           // strokeDashoffset: 0,
           strokeDashoffset: el.getTotalLength() * 2,
