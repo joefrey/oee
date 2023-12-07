@@ -41,6 +41,7 @@ $(document).ready(function () {
     });
 
     path.forEach((el) => {
+      console.log(el.getTotalLength());
       svgLinesTL.to(
         el,
         1000,
