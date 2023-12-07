@@ -55,6 +55,10 @@ $(document).ready(function () {
         "start"
       );
     });
+    svgLinesTL.to("#curve-hero #pattern0", 1, {
+      scale: 1.0,
+      ease: "power4.inOut",
+    });
   }
   function resetElements() {
     // reset path
@@ -64,6 +68,10 @@ $(document).ready(function () {
         strokeDashoffset: el.getTotalLength(),
         strokeDasharray: el.getTotalLength(),
       });
+    });
+    gsap.set("#curve-hero #pattern0", {
+      scale: 1.5,
+      transformOrigin: "50% 50%",
     });
   }
 });
