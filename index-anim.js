@@ -33,9 +33,9 @@ $(document).ready(function () {
         trigger: path,
         start: "top 90%",
         end: "+=270%",
-        scrub: false,
+        // scrub: false,
         once: false,
-        pin: false,
+        // pin: false,
         markers: false,
       },
     });
