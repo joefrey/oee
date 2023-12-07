@@ -15,7 +15,7 @@ $(document).ready(function () {
 
         if (sectionID === "hero") {
           // heroAnimate();
-          // heroCurveAnimate();
+          heroCurveAnimate();
         }
         // else if (sectionID === "stats") {
         //   statsAnimate();
