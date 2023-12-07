@@ -44,20 +44,20 @@ $(document).ready(function () {
     path.forEach((el) => {
       svgLinesTL.to(
         el,
-        5,
+        3,
         {
           // strokeDashoffset: 0,
           strokeDashoffset: el.getTotalLength() * 2,
           strokeDasharray: el.getTotalLength(),
           // strokeDasharray: 0,
-          ease: "power4.inOut",
+          ease: "expo.inOut",
         },
         "start"
       );
     });
-    svgLinesTL.to("#curve-hero #pattern0", 1, {
+    svgLinesTL.to("#curve-hero #pattern0Hero", 1, {
       scale: 1.0,
-      ease: "power4.inOut",
+      ease: "expo.inOut",
     });
   }
   function resetElements() {
