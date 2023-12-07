@@ -54,5 +54,14 @@ $(document).ready(function () {
       );
     });
   }
-  function resetElements() {}
+  function resetElements() {
+    // reset path
+    const path = document.querySelectorAll("#curve-hero path");
+    path.forEach((el) => {
+      gsap.set(el, {
+        strokeDashoffset: el.getTotalLength(),
+        strokeDasharray: el.getTotalLength(),
+      });
+    });
+  }
 });
