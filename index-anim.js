@@ -44,11 +44,11 @@ $(document).ready(function () {
     path.forEach((el) => {
       svgLinesTL.to(
         el,
-        1000,
+        1.5,
         {
           // strokeDashoffset: 0,
           strokeDashoffset: el.getTotalLength() * 2,
-          delay: 2,
+          delay: 3,
           strokeDasharray: el.getTotalLength(),
           // strokeDasharray: 0,
           ease: "power4.inOut",
