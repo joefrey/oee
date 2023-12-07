@@ -27,7 +27,7 @@ $(document).ready(function () {
   function heroAnimate() {}
   function heroCurveAnimate() {
     const path = document.querySelectorAll("#curve-hero path");
-
+    console.log("enter animte");
     const svgLinesTL = gsap.timeline({
       scrollTrigger: {
         trigger: path,
