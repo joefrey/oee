@@ -48,7 +48,7 @@ $(document).ready(function () {
         {
           // strokeDashoffset: 0,
           strokeDashoffset: el.getTotalLength() * 2,
-          delay: 3,
+          delay: 1,
           strokeDasharray: el.getTotalLength(),
           // strokeDasharray: 0,
           ease: "power4.inOut",
