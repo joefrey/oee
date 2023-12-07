@@ -15,7 +15,7 @@ $(document).ready(function () {
 
         if (sectionID === "hero") {
           // heroAnimate();
-          heroCurveAnimate();
+          // heroCurveAnimate();
         }
         // else if (sectionID === "stats") {
         //   statsAnimate();
@@ -42,7 +42,7 @@ $(document).ready(function () {
 
     path.forEach((el) => {
       console.log(el.getTotalLength());
-      svgLinesTL.from(
+      svgLinesTL.to(
         el,
         1000,
         {
