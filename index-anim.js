@@ -49,7 +49,8 @@ $(document).ready(function () {
           // strokeDashoffset: 0,
           strokeDashoffset: el.getTotalLength(),
           delay: 2,
-          strokeDasharray: el.getTotalLength(),
+          // strokeDasharray: el.getTotalLength(),
+          strokeDasharray: 0,
           ease: "power4.inOut",
         },
         "start"
@@ -61,8 +62,7 @@ $(document).ready(function () {
     const path = document.querySelectorAll("#curve-hero path");
     path.forEach((el) => {
       gsap.set(el, {
-        strokeDashoffset: 0,
-        // strokeDashoffset: el.getTotalLength(),
+        strokeDashoffset: el.getTotalLength(),
         strokeDasharray: el.getTotalLength(),
       });
     });
