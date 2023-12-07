@@ -47,10 +47,10 @@ $(document).ready(function () {
         el,
         1000,
         {
-          // strokeDashoffset: 0,
-          strokeDashoffset: el.getTotalLength(),
+          strokeDashoffset: 0,
+          // strokeDashoffset: el.getTotalLength(),
           delay: 2,
-          // strokeDasharray: el.getTotalLength(),
+          strokeDasharray: el.getTotalLength(),
           strokeDasharray: 0,
           ease: "power4.inOut",
         },
