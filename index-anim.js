@@ -47,8 +47,8 @@ $(document).ready(function () {
         el,
         1000,
         {
-          strokeDashoffset: 0,
-          // strokeDashoffset: el.getTotalLength(),
+          // strokeDashoffset: 0,
+          strokeDashoffset: el.getTotalLength() * 2,
           delay: 2,
           strokeDasharray: el.getTotalLength(),
           // strokeDasharray: 0,
