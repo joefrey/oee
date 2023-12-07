@@ -51,7 +51,7 @@ $(document).ready(function () {
           // strokeDashoffset: el.getTotalLength(),
           delay: 2,
           strokeDasharray: el.getTotalLength(),
-          strokeDasharray: 0,
+          // strokeDasharray: 0,
           ease: "power4.inOut",
         },
         "start"
