@@ -63,7 +63,7 @@ $(document).ready(function () {
         opacity: 1,
         ease: "expo.inOut",
       },
-      "-=1"
+      "-=1.7"
     );
   }
   function resetElements() {
