@@ -55,11 +55,16 @@ $(document).ready(function () {
       );
     });
     const image = document.querySelector("#image0_301_15");
-    svgLinesTL.to(image, 1, {
-      scale: 1.0,
-      opacity: 1,
-      ease: "expo.inOut",
-    });
+    svgLinesTL.to(
+      image,
+      1,
+      {
+        scale: 1.0,
+        opacity: 1,
+        ease: "expo.inOut",
+      },
+      "-=.5"
+    );
   }
   function resetElements() {
     // reset path
