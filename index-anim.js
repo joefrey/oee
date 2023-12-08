@@ -45,7 +45,7 @@ $(document).ready(function () {
       3,
       {
         strokeDashoffset: 0,
-        // strokeDasharray: "11 11",
+        strokeDasharray: "11,11",
         ease: "expo.inOut",
       },
       "start"
@@ -193,7 +193,7 @@ $(document).ready(function () {
     const dashedLineOneEl = document.querySelector("#dashed-line-One path");
     gsap.set(dashedLineOneEl, {
       strokeDashoffset: dashedLineOneEl.getTotalLength(),
-      strokeDasharray: "11 11",
+      strokeDasharray: "11, 11",
     });
 
     const image = document.querySelector("#image0_301_15");
