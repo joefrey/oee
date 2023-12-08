@@ -31,7 +31,7 @@ $(document).ready(function () {
 
     const dashedLineOneTL = gsap.timeline({
       scrollTrigger: {
-        trigger: dashedLineOneEl,
+        trigger: dashedOverlay,
         start: "top 90%",
         end: "+=270%",
         // start: "top 80%",
