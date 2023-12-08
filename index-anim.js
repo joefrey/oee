@@ -23,6 +23,61 @@ $(document).ready(function () {
       },
     });
   });
+  function getInTouchAnimate() {
+    const dashedOverlay = document.querySelector(
+      ".dashed_curve__services_whoweare .dash__overlay"
+    );
+
+    const dashedLineTwoTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: dashedOverlay,
+        start: "top 90%",
+        end: "+=270%",
+        // start: "top 80%",
+        // end: "bottom 20%",
+        scrub: false,
+        once: false,
+        pin: false,
+        markers: false,
+      },
+    });
+    dashedLineTwoTL.to(dashedOverlay, 1.8, {
+      bottom: 0,
+      height: "0%",
+      ease: "expo.inOut",
+    });
+
+    const getInTouchWrap = document.querySelector(".get_in_touch_wrap");
+
+    const els = document.querySelectorAll(
+      ".whoweare_content__homepage .el-gsap"
+    );
+
+    const sectionTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: getInTouchWrap,
+        start: "top 90%",
+        end: "+=270%",
+        // start: "top 80%",
+        // end: "bottom 20%",
+        scrub: false,
+        once: false,
+        pin: false,
+        markers: false,
+      },
+    });
+
+    sectionTL.to(els, 1.8, {
+      y: 0,
+      opacity: 1,
+      visibility: "visible",
+      delay: 0.5,
+      ease: "expo.out",
+      stagger: {
+        amount: 0.3,
+      },
+    });
+  }
   function whoWeAreAnimate() {
     // dashed_curve__services_whoweare;
 
