@@ -64,7 +64,7 @@ $(document).ready(function () {
         visibility: "visible",
         ease: "expo.inOut",
       },
-      "-=1.7"
+      "-=1.9"
     );
     const circleGradient = document.querySelector(".circle__gradient_homepage");
     svgLinesTL.to(
