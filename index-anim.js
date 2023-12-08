@@ -80,25 +80,18 @@ $(document).ready(function () {
       "-=1"
     );
 
-    const introContents = document.querySelectorAll(
-      ".section_hero-intro .el-gsap"
-    );
-    introContents.forEach((el) => {
-      gsap.to(el, 1.8, {
-        y: 0,
-        opacity: 1,
-        visibility: "visible",
-        delay: 2,
-        ease: "expo.inOut",
-        stagger: {
-          amount: 1,
-        },
-      });
-    });
+    const heroEls = document.querySelectorAll(".section_hero-intro .el-gsap");
 
-    // const introContents = document.querySelectorAll(
-    //   ".section_hero-intro .el-gsap"
-    // );
+    gsap.to(heroEls, 1.8, {
+      y: 0,
+      opacity: 1,
+      visibility: "visible",
+      delay: 2,
+      ease: "expo.inOut",
+      stagger: {
+        amount: 0.03,
+      },
+    });
 
     ScrollTrigger.batch(".el-gsap", {
       onEnter: (batch) => {
