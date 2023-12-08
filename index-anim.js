@@ -43,9 +43,9 @@ $(document).ready(function () {
         el,
         3,
         {
-          // strokeDashoffset: 0,
+          strokeDashoffset: 0,
           // strokeDasharray: 0,
-          strokeDashoffset: el.getTotalLength() * 2,
+          // strokeDashoffset: el.getTotalLength() * 2,
           strokeDasharray: el.getTotalLength(),
           ease: "expo.inOut",
         },
