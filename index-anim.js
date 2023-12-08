@@ -191,10 +191,10 @@ $(document).ready(function () {
       });
     });
 
-    const dashedLineOne = document.querySelector("#dashed-line-One path");
+    const dashedLineOneEl = document.querySelector("#dashed-line-One path");
     gsap.set(dashedLineOne, {
-      strokeDashoffset: el.getTotalLength(),
-      strokeDasharray: el.getTotalLength(),
+      strokeDashoffset: dashedLineOneEl.getTotalLength(),
+      strokeDasharray: dashedLineOneEl.getTotalLength(),
     });
 
     const image = document.querySelector("#image0_301_15");
