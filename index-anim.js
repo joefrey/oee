@@ -25,7 +25,7 @@ $(document).ready(function () {
   });
   function serviceCurveAnimate() {
     const path = document.querySelectorAll("#curveTwo path");
-    const dashedLineOne = document.querySelector("#dashed-line-One path");
+    const dashedLineOneEl = document.querySelector("#dashed-line-One path");
 
     const dashedLineOneTL = gsap.timeline({
       scrollTrigger: {
@@ -39,13 +39,11 @@ $(document).ready(function () {
       },
     });
     dashedLineOneTL.to(
-      dashedLineOne,
+      dashedLineOneEl,
       3,
       {
-        strokeDashoffset: 0,
-        // strokeDasharray: 0,
-        // strokeDashoffset: el.getTotalLength() * 2,
-        strokeDasharray: el.getTotalLength(),
+        strokeDashoffset: el.getTotalLength(),
+        strokeDasharray: 0,
         ease: "expo.inOut",
       },
       "start"
