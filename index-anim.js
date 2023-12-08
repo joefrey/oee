@@ -48,6 +48,34 @@ $(document).ready(function () {
       height: "0%",
       ease: "expo.inOut",
     });
+
+    const els = document.querySelectorAll(".services_content_wrap .el-gsap");
+    const sectionWrap = document.querySelector(".whoweare_content__homepage");
+
+    const sectionTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionWrap,
+        start: "top 90%",
+        end: "+=270%",
+        // start: "top 80%",
+        // end: "bottom 20%",
+        scrub: false,
+        once: false,
+        pin: false,
+        markers: false,
+      },
+    });
+
+    sectionTL.to(els, 1.8, {
+      y: 0,
+      opacity: 1,
+      visibility: "visible",
+      delay: 0.5,
+      ease: "expo.out",
+      stagger: {
+        amount: 0.3,
+      },
+    });
   }
   function serviceCurveAnimate() {
     const path = document.querySelectorAll("#curveTwo path");
