@@ -44,8 +44,8 @@ $(document).ready(function () {
       dashedLineOneEl,
       3,
       {
-        strokeDashoffset: dashedLineOneEl.getTotalLength(),
-        strokeDasharray: 0,
+        strokeDashoffset: 0,
+        // strokeDasharray: 0,
         ease: "expo.inOut",
       },
       "start"
