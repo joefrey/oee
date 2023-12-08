@@ -88,6 +88,21 @@ $(document).ready(function () {
       },
       "-=1.9"
     );
+
+    const servicesEls = document.querySelectorAll(
+      ".services_content_wrap .el-gsap"
+    );
+
+    gsap.to(servicesEls, 1.8, {
+      y: 0,
+      opacity: 1,
+      visibility: "visible",
+      delay: 0.5,
+      ease: "expo.out",
+      stagger: {
+        amount: 0.3,
+      },
+    });
   }
   function heroCurveAnimate() {
     const path = document.querySelectorAll("#curve-hero path");
@@ -155,19 +170,6 @@ $(document).ready(function () {
         amount: 0.3,
       },
     });
-
-    // ScrollTrigger.batch(".el-gsap", {
-    //   onEnter: (batch) => {
-    //     gsap.to(batch, 1.8, {
-    //       y: 0,
-    //       opacity: 1,
-    //       visibility: "visible",
-    //       ease: "expo.inOut",
-    //     });
-    //     // gsap.from(batch, {rotation: 360, duration: 2})
-    //   },
-    //   toggleActions: "play none none none",
-    // });
   }
   function resetElements() {
     // reset path
