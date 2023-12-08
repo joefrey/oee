@@ -50,7 +50,7 @@ $(document).ready(function () {
         "start"
       );
     });
-    const image = document.querySelector("#image0_265_2024");
+    const image = document.querySelector("#image0_300_2");
     svgLinesTL.to(
       image,
       1.7,
@@ -99,6 +99,13 @@ $(document).ready(function () {
         strokeDashoffset: el.getTotalLength(),
         strokeDasharray: el.getTotalLength(),
       });
+    });
+
+    const heroCurveImage = document.querySelector("#image0_300_2");
+    gsap.set(heroCurveImage, {
+      scale: 1.5,
+      opacity: 0,
+      transformOrigin: "50% 50%",
     });
 
     // intro texts
