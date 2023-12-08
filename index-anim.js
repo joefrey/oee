@@ -14,17 +14,57 @@ $(document).ready(function () {
         let sectionID = elem.id;
 
         if (sectionID === "hero") {
-          // heroAnimate();
           heroCurveAnimate();
+        } else if (sectionID === "section_services") {
+          // statsAnimate();
+          // bubblesAnimate();
+          serviceCurveAnimate();
         }
-        // else if (sectionID === "stats") {
-        //   statsAnimate();
-        //   bubblesAnimate();
-        // }
       },
     });
   });
-  function heroAnimate() {}
+  function serviceCurveAnimate() {
+    const path = document.querySelectorAll("#curveTwo path");
+    // const svgLinesTL = gsap.timeline();
+    const svgLinesTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: path,
+        start: "top 90%",
+        end: "+=270%",
+        scrub: false,
+        once: false,
+        pin: false,
+        markers: false,
+      },
+    });
+
+    path.forEach((el) => {
+      svgLinesTL.to(
+        el,
+        3,
+        {
+          // strokeDashoffset: 0,
+          // strokeDasharray: 0,
+          strokeDashoffset: el.getTotalLength() * 2,
+          strokeDasharray: el.getTotalLength(),
+          ease: "expo.inOut",
+        },
+        "start"
+      );
+    });
+    const image = document.querySelector("#curveTwo_image0_202_42");
+    svgLinesTL.to(
+      image,
+      1.7,
+      {
+        scale: 1.0,
+        opacity: 1,
+        visibility: "visible",
+        ease: "expo.inOut",
+      },
+      "-=1.9"
+    );
+  }
   function heroCurveAnimate() {
     const path = document.querySelectorAll("#curve-hero path");
     // const svgLinesTL = gsap.timeline();
