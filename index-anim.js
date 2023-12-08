@@ -45,7 +45,7 @@ $(document).ready(function () {
       3,
       {
         strokeDashoffset: 0,
-        // strokeDasharray: 0,
+        strokeDasharray: "11 11",
         ease: "expo.inOut",
       },
       "start"
@@ -73,8 +73,6 @@ $(document).ready(function () {
         3,
         {
           strokeDashoffset: 0,
-          // strokeDasharray: 0,
-          // strokeDashoffset: el.getTotalLength() * 2,
           strokeDasharray: el.getTotalLength(),
           ease: "expo.inOut",
         },
@@ -96,7 +94,6 @@ $(document).ready(function () {
   }
   function heroCurveAnimate() {
     const path = document.querySelectorAll("#curve-hero path");
-    // const svgLinesTL = gsap.timeline();
     const svgLinesTL = gsap.timeline({
       scrollTrigger: {
         trigger: path,
@@ -196,7 +193,7 @@ $(document).ready(function () {
     const dashedLineOneEl = document.querySelector("#dashed-line-One path");
     gsap.set(dashedLineOneEl, {
       strokeDashoffset: dashedLineOneEl.getTotalLength(),
-      // strokeDasharray: dashedLineOneEl.getTotalLength(),
+      strokeDasharray: "11 11",
     });
 
     const image = document.querySelector("#image0_301_15");
