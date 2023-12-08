@@ -294,7 +294,7 @@ $(document).ready(function () {
           strokeDasharray: el.getTotalLength(),
           ease: "expo.inOut",
         },
-        "start"
+        "start=-3"
       );
     });
     const image = document.querySelector("#image0_301_15");
