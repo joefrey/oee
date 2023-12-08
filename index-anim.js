@@ -30,10 +30,10 @@ $(document).ready(function () {
     const dashedLineOneTL = gsap.timeline({
       scrollTrigger: {
         trigger: path,
-        // start: "top 90%",
-        // end: "+=270%",
-        start: "top 80%",
-        end: "bottom 20%",
+        start: "top 90%",
+        end: "+=270%",
+        // start: "top 80%",
+        // end: "bottom 20%",
         scrub: false,
         once: false,
         pin: false,
@@ -44,7 +44,7 @@ $(document).ready(function () {
       dashedLineOneEl,
       3,
       {
-        strokeDashoffset: el.getTotalLength(),
+        strokeDashoffset: dashedLineOneEl.getTotalLength(),
         strokeDasharray: 0,
         ease: "expo.inOut",
       },
@@ -56,10 +56,10 @@ $(document).ready(function () {
     const svgLinesTL = gsap.timeline({
       scrollTrigger: {
         trigger: path,
-        // start: "top 90%",
-        // end: "+=270%",
-        start: "top 80%",
-        end: "bottom 20%",
+        start: "top 90%",
+        end: "+=270%",
+        // start: "top 80%",
+        // end: "bottom 20%",
         scrub: false,
         once: false,
         pin: false,
