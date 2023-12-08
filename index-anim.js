@@ -65,6 +65,12 @@ $(document).ready(function () {
       },
       "-=1.7"
     );
+    const circleGradient = document.querySelector(".circle__gradient_homepage");
+    svgLinesTL.to(circleGradient, 1.7, {
+      y: 0,
+      opacity: 1,
+      ease: "expo.inOut",
+    });
   }
   function resetElements() {
     // reset path
@@ -80,6 +86,11 @@ $(document).ready(function () {
       scale: 1.5,
       opacity: 0,
       transformOrigin: "50% 50%",
+    });
+    const circleGradient = document.querySelector(".circle__gradient_homepage");
+    gsap.set(circleGradient, {
+      y: -20,
+      opacity: 0,
     });
   }
 });
