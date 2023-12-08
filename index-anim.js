@@ -82,7 +82,7 @@ $(document).ready(function () {
 
     const heroEls = document.querySelectorAll(".section_hero-intro .el-gsap");
 
-    gsap.to(heroEls, 1, {
+    gsap.to(heroEls, 1.8, {
       y: 0,
       opacity: 1,
       visibility: "visible",
