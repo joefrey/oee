@@ -16,9 +16,9 @@ $(document).ready(function () {
         if (sectionID === "hero") {
           heroCurveAnimate();
         } else if (sectionID === "section_services") {
-          // statsAnimate();
-          // bubblesAnimate();
           serviceCurveAnimate();
+        } else if (sectionID === "who_we_are") {
+          whoWeAreAnimate();
         }
       },
     });
