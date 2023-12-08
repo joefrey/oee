@@ -354,6 +354,14 @@ $(document).ready(function () {
       });
     });
 
+    const curveThreePath = document.querySelectorAll("#curveThree path");
+    curveThreePath.forEach((el) => {
+      gsap.set(el, {
+        strokeDashoffset: el.getTotalLength(),
+        strokeDasharray: el.getTotalLength(),
+      });
+    });
+
     const image = document.querySelector("#image0_301_15");
     gsap.set(image, {
       scale: 1.5,
