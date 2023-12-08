@@ -26,7 +26,7 @@ $(document).ready(function () {
   function serviceCurveAnimate() {
     const path = document.querySelectorAll("#curveTwo path");
     const dashedOverlay = document.querySelector(
-      ".dashed_curve__hero_services .dash_overlay"
+      ".dashed_curve__hero_services .dash__overlay"
     );
 
     const dashedLineOneTL = gsap.timeline({
