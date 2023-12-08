@@ -66,11 +66,16 @@ $(document).ready(function () {
       "-=1.7"
     );
     const circleGradient = document.querySelector(".circle__gradient_homepage");
-    svgLinesTL.to(circleGradient, 1.7, {
-      y: 0,
-      opacity: 1,
-      ease: "expo.inOut",
-    });
+    svgLinesTL.to(
+      circleGradient,
+      1.7,
+      {
+        y: 0,
+        opacity: 1,
+        ease: "expo.inOut",
+      },
+      "-=1"
+    );
   }
   function resetElements() {
     // reset path
