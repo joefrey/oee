@@ -51,7 +51,7 @@ $(document).ready(function () {
           strokeDasharray: el.getTotalLength(),
           ease: "expo.inOut",
         },
-        "start"
+        "-=3"
       );
     });
     const image = document.querySelector("#image0_301_15");
