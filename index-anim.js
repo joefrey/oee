@@ -55,7 +55,8 @@ $(document).ready(function () {
         "start"
       );
     });
-    svgLinesTL.to("#curve-hero #pattern0Hero", 1, {
+    const image = querySelector("#image0_301_15");
+    svgLinesTL.to(image, 1, {
       scale: 1.0,
       ease: "expo.inOut",
     });
@@ -69,7 +70,8 @@ $(document).ready(function () {
         strokeDasharray: el.getTotalLength(),
       });
     });
-    gsap.set("#curve-hero #pattern0", {
+    const image = querySelector("#image0_301_15");
+    gsap.set(image, {
       scale: 1.5,
       transformOrigin: "50% 50%",
     });
