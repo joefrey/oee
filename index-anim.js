@@ -49,7 +49,9 @@ $(document).ready(function () {
       ease: "expo.inOut",
     });
 
-    const els = document.querySelectorAll(".services_content_wrap .el-gsap");
+    const els = document.querySelectorAll(
+      ".whoweare_content__homepage .el-gsap"
+    );
     const sectionWrap = document.querySelector(".whoweare_content__homepage");
 
     const sectionTL = gsap.timeline({
