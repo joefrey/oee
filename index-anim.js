@@ -27,10 +27,10 @@ $(document).ready(function () {
   });
   function getInTouchAnimate() {
     const dashedOverlay = document.querySelector(
-      ".dashed_curve__services_whoweare .dash__overlay"
+      ".dashed_curve__whoweare_getintouch .dash__overlay"
     );
 
-    const dashedLineTwoTL = gsap.timeline({
+    const dashedLineThreeTL = gsap.timeline({
       scrollTrigger: {
         trigger: dashedOverlay,
         start: "top 90%",
@@ -43,7 +43,7 @@ $(document).ready(function () {
         markers: false,
       },
     });
-    dashedLineTwoTL.to(dashedOverlay, 1.8, {
+    dashedLineThreeTL.to(dashedOverlay, 1.8, {
       bottom: 0,
       height: "0%",
       ease: "expo.inOut",
@@ -51,9 +51,7 @@ $(document).ready(function () {
 
     const getInTouchWrap = document.querySelector(".get_in_touch_wrap");
 
-    const els = document.querySelectorAll(
-      ".whoweare_content__homepage .el-gsap"
-    );
+    const els = document.querySelectorAll(".get_in_touch_wrap .el-gsap");
 
     const sectionTL = gsap.timeline({
       scrollTrigger: {
