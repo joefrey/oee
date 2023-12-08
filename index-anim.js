@@ -82,14 +82,14 @@ $(document).ready(function () {
 
     const heroEls = document.querySelectorAll(".section_hero-intro .el-gsap");
 
-    gsap.to(heroEls, 1.8, {
+    gsap.to(heroEls, 1, {
       y: 0,
       opacity: 1,
       visibility: "visible",
-      delay: 0.7,
+      delay: 0.5,
       ease: "expo.inOut",
       stagger: {
-        amount: 1,
+        amount: 0.3,
       },
     });
 
