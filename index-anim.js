@@ -19,6 +19,8 @@ $(document).ready(function () {
           serviceCurveAnimate();
         } else if (sectionID === "who_we_are") {
           whoWeAreAnimate();
+        } else if (sectionID === "getintouch") {
+          getInTouchAnimate();
         }
       },
     });
