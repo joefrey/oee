@@ -43,11 +43,11 @@ $(document).ready(function () {
         el,
         3,
         {
-          strokeDashoffset: el.getTotalLength() * 2,
+          strokeDashoffset: 0,
           strokeDasharray: el.getTotalLength(),
           ease: "expo.inOut",
         },
-        "start=-3"
+        "start"
       );
     });
     const image = document.querySelector("#image0_265_2024");
@@ -92,5 +92,20 @@ $(document).ready(function () {
     });
   }
 
-  function resetElements() {}
+  function resetElements() {
+    const path = document.querySelectorAll("#curve-hero path");
+    path.forEach((el) => {
+      gsap.set(el, {
+        strokeDashoffset: el.getTotalLength(),
+        strokeDasharray: el.getTotalLength(),
+      });
+    });
+
+    // intro texts
+    const gsapEls = document.querySelectorAll(".el-gsap");
+    gsap.set(gsapEls, {
+      y: 100,
+      opacity: 0,
+    });
+  }
 });
