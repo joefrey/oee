@@ -86,10 +86,10 @@ $(document).ready(function () {
       y: 0,
       opacity: 1,
       visibility: "visible",
-      delay: 2,
+      delay: 0.7,
       ease: "expo.inOut",
       stagger: {
-        amount: 0.03,
+        amount: 1,
       },
     });
 
