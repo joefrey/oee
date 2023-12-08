@@ -79,6 +79,22 @@ $(document).ready(function () {
       },
       "-=1"
     );
+
+    const introContents = document.querySelectorAll(
+      ".section_hero-intro .el-gsap"
+    );
+    introContents.forEach((el) => {
+      gsap.to(el, 1.8, {
+        y: 0,
+        opacity: 1,
+        visibility: "visible",
+        delay: 0.5,
+        ease: "expo.inOut",
+        stagger: {
+          amount: 0.3,
+        },
+      });
+    });
   }
   function resetElements() {
     // reset path
@@ -100,6 +116,17 @@ $(document).ready(function () {
       y: -20,
       opacity: 0,
       rotation: 10,
+    });
+
+    // intro texts
+    const introContents = document.querySelectorAll(
+      ".section_hero-intro .el-gsap"
+    );
+    introContents.forEach((el) => {
+      gsap.set(el, {
+        y: 50,
+        opacity: 0,
+      });
     });
   }
 });
