@@ -192,7 +192,7 @@ $(document).ready(function () {
     });
 
     const dashedLineOneEl = document.querySelector("#dashed-line-One path");
-    gsap.set(dashedLineOne, {
+    gsap.set(dashedLineOneEl, {
       strokeDashoffset: dashedLineOneEl.getTotalLength(),
       strokeDasharray: dashedLineOneEl.getTotalLength(),
     });
