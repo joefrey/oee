@@ -196,7 +196,7 @@ $(document).ready(function () {
     const dashedLineOneEl = document.querySelector("#dashed-line-One path");
     gsap.set(dashedLineOneEl, {
       strokeDashoffset: dashedLineOneEl.getTotalLength(),
-      strokeDasharray: dashedLineOneEl.getTotalLength(),
+      // strokeDasharray: dashedLineOneEl.getTotalLength(),
     });
 
     const image = document.querySelector("#image0_301_15");
