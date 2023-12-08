@@ -134,13 +134,13 @@ $(document).ready(function () {
     );
     // introContents.forEach((el) => {
     gsap.set(introContents, {
-      y: 50,
+      y: 80,
       opacity: 0,
     });
     // });
 
     gsap.set(".el-gsap", {
-      y: 50,
+      y: 80,
       opacity: 0,
     });
   }
