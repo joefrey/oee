@@ -44,7 +44,7 @@ $(document).ready(function () {
     });
     dashedLineOneTL.to(dashedOverlay, 1.8, {
       bottom: 0,
-      height: 0,
+      height: "0%",
       ease: "expo.inOut",
     });
 
