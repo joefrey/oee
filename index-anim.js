@@ -25,7 +25,9 @@ $(document).ready(function () {
   });
   function serviceCurveAnimate() {
     const path = document.querySelectorAll("#curveTwo path");
-    const dashedLineOneEl = document.querySelector("#dashed-line-One path");
+    const dashedOverlay = document.querySelector(
+      ".dashed_curve__hero_services .dash_overlay"
+    );
 
     const dashedLineOneTL = gsap.timeline({
       scrollTrigger: {
@@ -40,16 +42,11 @@ $(document).ready(function () {
         markers: false,
       },
     });
-    dashedLineOneTL.to(
-      dashedLineOneEl,
-      3,
-      {
-        strokeDashoffset: dashedLineOneEl.getTotalLength(),
-        strokeDasharray: "11,11",
-        ease: "expo.inOut",
-      },
-      "start"
-    );
+    dashedLineOneTL.to(dashedOverlay, 1.8, {
+      bottom: 0,
+      height: 0,
+      ease: "expo.inOut",
+    });
 
     // const svgLinesTL = gsap.timeline();
 
@@ -190,11 +187,11 @@ $(document).ready(function () {
       });
     });
 
-    const dashedLineOneEl = document.querySelector("#dashed-line-One path");
-    gsap.set(dashedLineOneEl, {
-      strokeDashoffset: dashedLineOneEl.getTotalLength(),
-      strokeDasharray: dashedLineOneEl.getTotalLength(),
-    });
+    // const dashedLineOneEl = document.querySelector("#dashed-line-One path");
+    // gsap.set(dashedLineOneEl, {
+    //   strokeDashoffset: dashedLineOneEl.getTotalLength(),
+    //   strokeDasharray: dashedLineOneEl.getTotalLength(),
+    // });
 
     const image = document.querySelector("#image0_301_15");
     gsap.set(image, {
