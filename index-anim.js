@@ -104,6 +104,47 @@ $(document).ready(function () {
       ease: "expo.inOut",
     });
 
+    /* path and curve*/
+    const path = document.querySelectorAll("#curveThree path");
+    const svgLinesTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: path,
+        start: "top 90%",
+        end: "+=270%",
+        // start: "top 80%",
+        // end: "bottom 20%",
+        scrub: false,
+        once: false,
+        pin: false,
+        markers: false,
+      },
+    });
+
+    path.forEach((el) => {
+      svgLinesTL.to(
+        el,
+        3,
+        {
+          strokeDashoffset: 0,
+          strokeDasharray: el.getTotalLength(),
+          ease: "expo.inOut",
+        },
+        "start"
+      );
+    });
+    const image = document.querySelector("#image0_308_47CurveThree");
+    svgLinesTL.to(
+      image,
+      1.7,
+      {
+        scale: 1.0,
+        opacity: 1,
+        visibility: "visible",
+        ease: "expo.inOut",
+      },
+      "-=1.9"
+    );
+
     const els = document.querySelectorAll(
       ".whoweare_content__homepage .el-gsap"
     );
