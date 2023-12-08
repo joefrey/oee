@@ -27,19 +27,18 @@ $(document).ready(function () {
   function heroAnimate() {}
   function heroCurveAnimate() {
     const path = document.querySelectorAll("#curve-hero path");
-    console.log("enter animte");
-    const svgLinesTL = gsap.timeline();
-    // const svgLinesTL = gsap.timeline({
-    //   scrollTrigger: {
-    //     trigger: path,
-    //     start: "top 90%",
-    //     end: "+=270%",
-    //     scrub: true,
-    //     once: false,
-    //     pin: false,
-    //     markers: false,
-    //   },
-    // });
+    // const svgLinesTL = gsap.timeline();
+    const svgLinesTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: path,
+        start: "top 90%",
+        end: "+=270%",
+        scrub: false,
+        once: false,
+        pin: false,
+        markers: false,
+      },
+    });
 
     path.forEach((el) => {
       svgLinesTL.to(
