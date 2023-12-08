@@ -29,7 +29,7 @@ $(document).ready(function () {
 
     const dashedLineOneTL = gsap.timeline({
       scrollTrigger: {
-        trigger: path,
+        trigger: dashedLineOneEl,
         start: "top 90%",
         end: "+=270%",
         // start: "top 80%",
@@ -193,7 +193,7 @@ $(document).ready(function () {
     const dashedLineOneEl = document.querySelector("#dashed-line-One path");
     gsap.set(dashedLineOneEl, {
       strokeDashoffset: dashedLineOneEl.getTotalLength(),
-      strokeDasharray: "11, 11",
+      strokeDasharray: dashedLineOneEl.getTotalLength(),
     });
 
     const image = document.querySelector("#image0_301_15");
