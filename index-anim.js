@@ -95,6 +95,23 @@ $(document).ready(function () {
         },
       });
     });
+
+    // const introContents = document.querySelectorAll(
+    //   ".section_hero-intro .el-gsap"
+    // );
+
+    ScrollTrigger.batch(".el-gsap", {
+      onEnter: (batch) => {
+        gsap.to(batch, 1.8, {
+          y: 0,
+          opacity: 1,
+          visibility: "visible",
+          ease: "expo.inOut",
+        });
+        // gsap.from(batch, {rotation: 360, duration: 2})
+      },
+      toggleActions: "play none none none",
+    });
   }
   function resetElements() {
     // reset path
@@ -127,6 +144,11 @@ $(document).ready(function () {
         y: 50,
         opacity: 0,
       });
+    });
+
+    gsap.set(".el-gsap", {
+      y: 50,
+      opacity: 0,
     });
   }
 });
