@@ -87,7 +87,7 @@ $(document).ready(function () {
       opacity: 1,
       visibility: "visible",
       delay: 0.5,
-      ease: "expo.in",
+      ease: "expo.out",
       stagger: {
         amount: 0.3,
       },
