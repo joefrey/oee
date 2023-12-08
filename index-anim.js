@@ -25,7 +25,34 @@ $(document).ready(function () {
   });
   function serviceCurveAnimate() {
     const path = document.querySelectorAll("#curveTwo path");
+    const dashedLineOne = document.querySelector("#dashed-line-One path");
+
+    const dashedLineOneTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: path,
+        start: "top 90%",
+        end: "+=270%",
+        scrub: false,
+        once: false,
+        pin: false,
+        markers: false,
+      },
+    });
+    dashedLineOneTL.to(
+      dashedLineOne,
+      3,
+      {
+        strokeDashoffset: 0,
+        // strokeDasharray: 0,
+        // strokeDashoffset: el.getTotalLength() * 2,
+        strokeDasharray: el.getTotalLength(),
+        ease: "expo.inOut",
+      },
+      "start"
+    );
+
     // const svgLinesTL = gsap.timeline();
+
     const svgLinesTL = gsap.timeline({
       scrollTrigger: {
         trigger: path,
@@ -162,6 +189,12 @@ $(document).ready(function () {
         strokeDashoffset: el.getTotalLength(),
         strokeDasharray: el.getTotalLength(),
       });
+    });
+
+    const dashedLineOne = document.querySelector("#dashed-line-One path");
+    gsap.set(dashedLineOne, {
+      strokeDashoffset: el.getTotalLength(),
+      strokeDasharray: el.getTotalLength(),
     });
 
     const image = document.querySelector("#image0_301_15");
