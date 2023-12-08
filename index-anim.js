@@ -45,7 +45,7 @@ $(document).ready(function () {
       3,
       {
         strokeDashoffset: 0,
-        strokeDasharray: "11 11",
+        // strokeDasharray: "11 11",
         ease: "expo.inOut",
       },
       "start"
