@@ -362,12 +362,27 @@ $(document).ready(function () {
       });
     });
 
-    const image = document.querySelector("#image0_301_15");
-    gsap.set(image, {
+    const heroCurveImage = document.querySelector("#image0_301_15");
+    gsap.set(heroCurveImage, {
       scale: 1.5,
       opacity: 0,
       transformOrigin: "50% 50%",
     });
+
+    const curveTwoImage = document.querySelector("#curveTwo_image0_202_42");
+    gsap.set(curveTwoImage, {
+      scale: 1.5,
+      opacity: 0,
+      transformOrigin: "50% 50%",
+    });
+
+    const curveThreeImage = document.querySelector("#image0_308_47CurveThree");
+    gsap.set(curveThreeImage, {
+      scale: 1.5,
+      opacity: 0,
+      transformOrigin: "50% 50%",
+    });
+
     const circleGradient = document.querySelector(".circle__gradient_homepage");
     gsap.set(circleGradient, {
       y: -20,
