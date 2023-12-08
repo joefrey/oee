@@ -92,8 +92,23 @@ $(document).ready(function () {
     const servicesEls = document.querySelectorAll(
       ".services_content_wrap .el-gsap"
     );
+    const serviceWrap = document.querySelector(".services_content_wrap");
 
-    gsap.to(servicesEls, 1.8, {
+    const servicesTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: serviceWrap,
+        start: "top 90%",
+        end: "+=270%",
+        // start: "top 80%",
+        // end: "bottom 20%",
+        scrub: false,
+        once: false,
+        pin: false,
+        markers: false,
+      },
+    });
+
+    servicesTL.to(servicesEls, 1.8, {
       y: 0,
       opacity: 1,
       visibility: "visible",
@@ -209,17 +224,8 @@ $(document).ready(function () {
     });
 
     // intro texts
-    const introContents = document.querySelectorAll(
-      ".section_hero-intro .el-gsap"
-    );
-    // introContents.forEach((el) => {
-    gsap.set(introContents, {
-      y: 80,
-      opacity: 0,
-    });
-    // });
-
-    gsap.set(".el-gsap", {
+    const gsapEls = document.querySelectorAll(".el-gsap");
+    gsap.set(gsapEls, {
       y: 80,
       opacity: 0,
     });
