@@ -46,9 +46,9 @@ $(document).ready(function () {
         3,
         {
           // strokeDashoffset: 0,
+          // strokeDasharray: 0,
           strokeDashoffset: el.getTotalLength() * 2,
           strokeDasharray: el.getTotalLength(),
-          // strokeDasharray: 0,
           ease: "expo.inOut",
         },
         "start"
@@ -57,6 +57,7 @@ $(document).ready(function () {
     const image = document.querySelector("#image0_301_15");
     svgLinesTL.to(image, 1, {
       scale: 1.0,
+      opacity: 1,
       ease: "expo.inOut",
     });
   }
@@ -72,6 +73,7 @@ $(document).ready(function () {
     const image = document.querySelector("#image0_301_15");
     gsap.set(image, {
       scale: 1.5,
+      opacity: 0,
       transformOrigin: "50% 50%",
     });
   }
