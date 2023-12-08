@@ -23,6 +23,32 @@ $(document).ready(function () {
       },
     });
   });
+  function whoWeAreAnimate() {
+    // dashed_curve__services_whoweare;
+
+    const dashedOverlay = document.querySelector(
+      ".dashed_curve__services_whoweare .dash__overlay"
+    );
+
+    const dashedLineTwoTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: dashedOverlay,
+        start: "top 90%",
+        end: "+=270%",
+        // start: "top 80%",
+        // end: "bottom 20%",
+        scrub: false,
+        once: false,
+        pin: false,
+        markers: false,
+      },
+    });
+    dashedLineTwoTL.to(dashedOverlay, 1.8, {
+      bottom: 0,
+      height: "0%",
+      ease: "expo.inOut",
+    });
+  }
   function serviceCurveAnimate() {
     const path = document.querySelectorAll("#curveTwo path");
     const dashedOverlay = document.querySelector(
@@ -138,8 +164,6 @@ $(document).ready(function () {
         el,
         3,
         {
-          // strokeDashoffset: 0,
-          // strokeDasharray: 0,
           strokeDashoffset: el.getTotalLength() * 2,
           strokeDasharray: el.getTotalLength(),
           ease: "expo.inOut",
@@ -204,12 +228,6 @@ $(document).ready(function () {
       });
     });
 
-    // const dashedLineOneEl = document.querySelector("#dashed-line-One path");
-    // gsap.set(dashedLineOneEl, {
-    //   strokeDashoffset: dashedLineOneEl.getTotalLength(),
-    //   strokeDasharray: dashedLineOneEl.getTotalLength(),
-    // });
-
     const image = document.querySelector("#image0_301_15");
     gsap.set(image, {
       scale: 1.5,
@@ -226,7 +244,7 @@ $(document).ready(function () {
     // intro texts
     const gsapEls = document.querySelectorAll(".el-gsap");
     gsap.set(gsapEls, {
-      y: 80,
+      y: 100,
       opacity: 0,
     });
   }
