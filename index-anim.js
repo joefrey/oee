@@ -88,10 +88,10 @@ $(document).ready(function () {
         y: 0,
         opacity: 1,
         visibility: "visible",
-        delay: 0.5,
+        delay: 2,
         ease: "expo.inOut",
         stagger: {
-          amount: 0.3,
+          amount: 1,
         },
       });
     });
