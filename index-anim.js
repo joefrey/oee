@@ -72,6 +72,8 @@ $(document).ready(function () {
       {
         y: 0,
         opacity: 1,
+        visibility: "visible",
+        rotation: 0,
         ease: "expo.inOut",
       },
       "-=1"
@@ -96,6 +98,7 @@ $(document).ready(function () {
     gsap.set(circleGradient, {
       y: -20,
       opacity: 0,
+      rotation: 10,
     });
   }
 });
