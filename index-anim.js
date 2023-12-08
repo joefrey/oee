@@ -155,6 +155,15 @@ $(document).ready(function () {
         strokeDasharray: el.getTotalLength(),
       });
     });
+
+    const curveTwoPath = document.querySelectorAll("#curveTwo path");
+    curveTwoPath.forEach((el) => {
+      gsap.set(el, {
+        strokeDashoffset: el.getTotalLength(),
+        strokeDasharray: el.getTotalLength(),
+      });
+    });
+
     const image = document.querySelector("#image0_301_15");
     gsap.set(image, {
       scale: 1.5,
