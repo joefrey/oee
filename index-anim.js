@@ -61,6 +61,7 @@ $(document).ready(function () {
       {
         scale: 1.0,
         opacity: 1,
+        visibility: "visible",
         ease: "expo.inOut",
       },
       "-=1.7"
