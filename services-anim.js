@@ -187,5 +187,12 @@ $(document).ready(function () {
       });
     });
 
+    const circleGradient = document.querySelector(".circle__gradient");
+    gsap.set(circleGradient, {
+      y: -20,
+      opacity: 0,
+      rotation: 10,
+    });
+
   }
 });
