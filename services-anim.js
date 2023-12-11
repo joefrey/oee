@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  gsap.registerPlugin(ScrollTrigger);
+  gsap.registerPlugin(ScrollTrigger, drawSVG);
 
   resetElements();
 
