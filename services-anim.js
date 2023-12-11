@@ -96,7 +96,7 @@ $(document).ready(function () {
     const path = document.querySelectorAll("#curve-hero path");
     path.forEach((el) => {
       gsap.set(el, {
-        strokeDashoffset: el.getTotalLength(),
+        strokeDashoffset: el.getTotalLength() * 2,
         strokeDasharray: el.getTotalLength(),
       });
     });
