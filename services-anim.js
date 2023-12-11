@@ -56,7 +56,7 @@ $(document).ready(function () {
         // const dashedCurve = dashElem.querySelector('.thePath');
         gsap.to(el, 1.8, {
           y: 0,
-          autoAlpha: 1,
+          opacity: 1,
           ease: "expo.inOut",
         })
       }
@@ -183,7 +183,7 @@ $(document).ready(function () {
     elAnim.forEach((el) => {
       gsap.set(elAnim, {
         y: 100,
-        autoAlpha: 0,
+        opacity: 0,
       });
     });
 
