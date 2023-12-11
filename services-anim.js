@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin);
+  gsap.registerPlugin(ScrollTrigger);
 
   resetElements();
 
@@ -91,8 +91,8 @@ $(document).ready(function () {
       },
     });
 
-    const heroDashed = document.querySelector('.hero-dashed');
-    gsap.to(heroDashed, {drawSVG: '100%'})
+    // const heroDashed = document.querySelector('.hero-dashed');
+    // gsap.to(heroDashed, {drawSVG: '100%'})
   }
 
   function resetElements() {
@@ -118,8 +118,8 @@ $(document).ready(function () {
       opacity: 0,
     });
 
-    const heroDashed = document.querySelector('.hero-dashed');
-    gsap.set(heroDashed, {drawSVG: '0%'})
+    // const heroDashed = document.querySelector('.hero-dashed');
+    // gsap.set(heroDashed, {drawSVG: '0%'})
 
 
   }
