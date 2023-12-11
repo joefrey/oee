@@ -180,7 +180,7 @@ $(document).ready(function () {
 
     // show animate elements reset
     const elAnim = document.querySelectorAll(".el-anim");
-    ashedPaths.forEach((el) => {
+    elAnim.forEach((el) => {
       gsap.set(elAnim, {
         y: 100,
         autoAlpha: 0,
