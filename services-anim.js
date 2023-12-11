@@ -51,12 +51,7 @@ $(document).ready(function () {
       );
     });
 
-    const dashedCurve = document.querySelector('#dashed-curve #thePath');
-    svgLinesTL.to(dashedCurve, 1.8, {
-      strokeDashoffset: 0,
-      strokeDasharray: dashedCurve.getTotalLength(),
-      ease: "expo.inOut",
-    })
+   
     const image = document.querySelector("#image0_301_15");
     svgLinesTL.to(
       image,
@@ -97,6 +92,14 @@ $(document).ready(function () {
         amount: 0.3,
       },
     });
+
+    const dashedCurve = document.querySelector('#dashed-curve #thePath');
+    svgLinesTL.to(dashedCurve, 1.8, {
+      strokeDashoffset: 0,
+      // strokeDasharray: dashedCurve.getTotalLength(),
+      strokeDasharray: '11, 11',
+      ease: "expo.inOut",
+    })
     
     
 
@@ -109,8 +112,7 @@ $(document).ready(function () {
     path.forEach((el) => {
       gsap.set(el, {
         strokeDashoffset: el.getTotalLength(),
-        // strokeDasharray: el.getTotalLength(),
-        strokeDasharray: '11, 11',
+        strokeDasharray: el.getTotalLength(),
       });
     });
 
