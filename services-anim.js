@@ -24,6 +24,26 @@ $(document).ready(function () {
     });
   });
 
+  // dashed curves
+  gsap.utils.toArray('.dashed-curve').forEach(function (dashElem) {
+    ScrollTrigger.create({
+      trigger: dashElem,
+      start: "top 80%",
+      end: "bottom 20%",
+      markers: false,
+      once: true,
+      onEnter: function () {
+        const dashedCurve = dashElem.querySelector('.thePath');
+        gsap.to(dashedCurve, 1.8, {
+          strokeDashoffset: -dashedCurve.getTotalLength(),
+          strokeDasharray: dashedCurve.getTotalLength(),
+          
+          ease: "expo.inOut",
+        })
+      }
+    })
+  });
+
   function heroAnimate() {
     const path = document.querySelectorAll("#curve-hero path");
     const svgLinesTL = gsap.timeline({
@@ -94,13 +114,13 @@ $(document).ready(function () {
     });
     
     
-    const dashedCurve = document.querySelector('#dashed-curve #thePath');
-    svgLinesTL.to(dashedCurve, 1.8, {
-      strokeDashoffset: -dashedCurve.getTotalLength(),
-      strokeDasharray: dashedCurve.getTotalLength(),
+    // const dashedCurve = document.querySelector('#dashed-curve #thePath');
+    // svgLinesTL.to(dashedCurve, 1.8, {
+    //   strokeDashoffset: -dashedCurve.getTotalLength(),
+    //   strokeDasharray: dashedCurve.getTotalLength(),
       // strokeDasharray: '11, 11',
-      ease: "expo.inOut",
-    })
+    //   ease: "expo.inOut",
+    // })
   }
 
   function resetElements() {
@@ -132,6 +152,13 @@ $(document).ready(function () {
       strokeDasharray: dashedCurve.getTotalLength(),
     })
 
-
+    // dashed lines
+    const dashedPaths = document.querySelectorAll(".dashed-curve .thePath");
+    dashedPaths.forEach((el) => {
+      gsap.set(el, {
+        strokeDashoffset: 0,
+        strokeDasharray: el.getTotalLength(),
+      });
+    });
   }
 });
