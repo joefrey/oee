@@ -97,7 +97,7 @@ $(document).ready(function () {
         el,
         3,
         {
-          strokeDashoffset: -el.getTotalLength(),
+          strokeDashoffset: 0,
           strokeDasharray: el.getTotalLength(),
           ease: "expo.inOut",
         },
