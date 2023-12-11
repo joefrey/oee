@@ -127,7 +127,7 @@ $(document).ready(function () {
 
     const dashedCurve = document.querySelector('#dashed-curve #thePath');
     gsap.set(dashedCurve, {
-      strokeDashoffset: dashedCurve.getTotalLength(),
+      strokeDashoffset: dashedCurve.getTotalLength() * 2,
       strokeDasharray: dashedCurve.getTotalLength(),
     })
 
