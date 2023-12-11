@@ -53,8 +53,8 @@ $(document).ready(function () {
 
     const dashedCurve = document.querySelector('#dashed-curve #thePath');
     svgLinesTL.to(dashedCurve, 3, {
-      strokeDashoffset: el.getTotalLength() * 2,
-      strokeDasharray: el.getTotalLength(),
+      strokeDashoffset: dashedCurve.getTotalLength() * 2,
+      strokeDasharray: dashedCurve.getTotalLength(),
       ease: "expo.inOut",
     })
     const image = document.querySelector("#image0_301_15");
