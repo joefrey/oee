@@ -15,16 +15,54 @@ $(document).ready(function () {
 
         if (sectionID === "hero") {
           heroAnimate();
-        } else if (sectionID === 'mission') {
-          // missionAnimate();
-        } else if (sectionID === 'section_services') {
-          // servicesAnimate();
+        } else if (sectionID === 'policy') {
+          policyAnimate();
         }
       },
     });
   });
 
+  function policyAnimate() {
+    const path = document.querySelectorAll("#curveThree path");
+    const svgLinesTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: path,
+        start: "top 90%",
+        end: "+=270%",
+        scrub: false,
+        once: false,
+        pin: false,
+        markers: false,
+      },
+    });
 
+    path.forEach((el) => {
+      svgLinesTL.to(
+        el,
+        3,
+        {
+          strokeDashoffset: el.getTotalLength() * 2,
+          strokeDasharray: el.getTotalLength(),
+          ease: "expo.inOut",
+        },
+        "start"
+      );
+    });
+
+
+    const image = document.querySelector("#image0_202_66");
+    svgLinesTL.to(
+      image,
+      1.7,
+      {
+        scale: 1.0,
+        opacity: 1,
+        visibility: "visible",
+        ease: "expo.inOut",
+      },
+      "-=1.9"
+    );
+  }
   function heroAnimate() {
     const path = document.querySelectorAll("#curve-hero path");
     const svgLinesTL = gsap.timeline({
@@ -127,6 +165,23 @@ $(document).ready(function () {
       opacity: 0,
       transformOrigin: "50% 50%",
     });
+
+    const cureveThreePath = document.querySelectorAll("#curveThree path");
+    cureveThreePath.forEach((el) => {
+      gsap.set(el, {
+        strokeDashoffset: el.getTotalLength(),
+        strokeDasharray: el.getTotalLength(),
+      });
+    });
+
+    const cureveThreeImage = document.querySelector("#image0_202_66");
+    gsap.set(cureveThreeImage, {
+      scale: 1.5,
+      opacity: 0,
+      transformOrigin: "50% 50%",
+    });
+
+
     
     // dashed lines
     const dashedPaths = document.querySelectorAll(".dashed-curve .thePath");
