@@ -23,6 +23,49 @@ $(document).ready(function () {
   });
 
   function servicesAnimate() {
+    
+    const curveTwoPath = document.querySelectorAll("#curveTwo path");
+    const svgCurveTwoLinesTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: curveTwoPath,
+        start: "top 90%",
+        end: "+=270%",
+        // start: "top 80%",
+        // end: "bottom 20%",
+        scrub: false,
+        once: false,
+        pin: false,
+        markers: false,
+      },
+    });
+
+    curveTwoPath.forEach((el) => {
+      svgCurveTwoLinesTL.to(
+        el,
+        3,
+        {
+          strokeDashoffset: 0,
+          strokeDasharray: el.getTotalLength(),
+          ease: "expo.inOut",
+        },
+        "start"
+      );
+    });
+    const curveTwoImage = document.querySelector("#curveTwo_image0_202_42");
+    svgCurveTwoLinesTL.to(
+      curveTwoImage,
+      1.7,
+      {
+        scale: 1.0,
+        opacity: 1,
+        visibility: "visible",
+        ease: "expo.inOut",
+      },
+      "-=1.9"
+    );
+
+
+
     const path = document.querySelectorAll("#curveThree path");
     const svgLinesTL = gsap.timeline({
       scrollTrigger: {
