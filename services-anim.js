@@ -50,6 +50,13 @@ $(document).ready(function () {
         "start"
       );
     });
+
+    const dashedCurve = document.querySelector('#dashed-curve #thePath');
+    svgLinesTL.to(dashedCurve, 3, {
+      strokeDashoffset: el.getTotalLength() * 2,
+      strokeDasharray: el.getTotalLength(),
+      ease: "expo.inOut",
+    })
     const image = document.querySelector("#image0_301_15");
     svgLinesTL.to(
       image,
@@ -90,6 +97,8 @@ $(document).ready(function () {
         amount: 0.3,
       },
     });
+    
+    
 
     // const heroDashed = document.querySelector('.hero-dashed');
     // gsap.to(heroDashed, {drawSVG: '100%'})
@@ -118,8 +127,11 @@ $(document).ready(function () {
       opacity: 0,
     });
 
-    // const heroDashed = document.querySelector('.hero-dashed');
-    // gsap.set(heroDashed, {drawSVG: '0%'})
+    const dashedCurve = document.querySelector('#dashed-curve #thePath');
+    gsap.set(dashedCurve, {
+      strokeDashoffset: dashedCurve.getTotalLength(),
+      strokeDasharray: dashedCurve.getTotalLength(),
+    })
 
 
   }
