@@ -50,7 +50,7 @@ $(document).ready(function () {
     });
 
 
-    const image = document.querySelector("#image0_202_66");
+    const image = document.querySelector("#image0_308_47CurveThree");
     svgLinesTL.to(
       image,
       1.7,
@@ -174,7 +174,7 @@ $(document).ready(function () {
       });
     });
 
-    const cureveThreeImage = document.querySelector("#image0_202_66");
+    const cureveThreeImage = document.querySelector("#image0_308_47CurveThree");
     gsap.set(cureveThreeImage, {
       scale: 1.5,
       opacity: 0,
