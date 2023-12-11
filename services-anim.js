@@ -109,7 +109,8 @@ $(document).ready(function () {
     path.forEach((el) => {
       gsap.set(el, {
         strokeDashoffset: el.getTotalLength(),
-        strokeDasharray: el.getTotalLength(),
+        // strokeDasharray: el.getTotalLength(),
+        strokeDasharray: '11, 11',
       });
     });
 
