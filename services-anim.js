@@ -56,7 +56,7 @@ $(document).ready(function () {
         // const dashedCurve = dashElem.querySelector('.thePath');
         gsap.to(el, 1.8, {
           y: 0,
-          autoAlpha: 0,
+          autoAlpha: 1,
           ease: "expo.inOut",
         })
       }
