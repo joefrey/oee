@@ -425,7 +425,7 @@ $(document).ready(function () {
     dashedPaths.forEach((el) => {
       gsap.set(el, {
         strokeDashoffset: 0,
-        strokeDasharray: dashedCurve.getTotalLength(),
+        strokeDasharray: el.getTotalLength(),
       });
     });
 
