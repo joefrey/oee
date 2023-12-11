@@ -96,7 +96,7 @@ $(document).ready(function () {
     
     const dashedCurve = document.querySelector('#dashed-curve #thePath');
     svgLinesTL.to(dashedCurve, 1.8, {
-      strokeDashoffset: dashedCurve.getTotalLength(),
+      strokeDashoffset: -dashedCurve.getTotalLength(),
       strokeDasharray: dashedCurve.getTotalLength(),
       // strokeDasharray: '11, 11',
       ease: "expo.inOut",
@@ -130,8 +130,6 @@ $(document).ready(function () {
     gsap.set(dashedCurve, {
       strokeDashoffset: 0,
       strokeDasharray: dashedCurve.getTotalLength(),
-      position: "absolute",
-      bottom: 0
       // strokeDasharray: '11, 11'
     })
 
