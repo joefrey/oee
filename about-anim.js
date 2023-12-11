@@ -190,6 +190,20 @@ $(document).ready(function () {
       rotation: 10,
     });
 
+    const curveTwoPath = document.querySelectorAll("#curveTwo path");
+    curveTwoPath.forEach((el) => {
+      gsap.set(el, {
+        strokeDashoffset: el.getTotalLength(),
+        strokeDasharray: el.getTotalLength(),
+      });
+    });
+    const curveTwoImage = document.querySelector("#curveTwo_image0_202_42");
+    gsap.set(curveTwoImage, {
+      scale: 1.5,
+      opacity: 0,
+      transformOrigin: "50% 50%",
+    });
+
     const curveThreePath = document.querySelectorAll("#curveThree path");
     curveThreePath.forEach((el) => {
       gsap.set(el, {
