@@ -16,7 +16,7 @@ $(document).ready(function () {
         if (sectionID === "hero") {
           heroAnimate();
         } else if (sectionID === "section_services") {
-          // serviceAnimate();
+          serviceAnimate();
         } else if (sectionID === "getintouch") {
           // getInTouchAnimate();
         }
@@ -75,7 +75,48 @@ $(document).ready(function () {
     })
   });
 
-  
+  function serviceAnimate() {
+
+    const path = document.querySelectorAll("#curveTwo path");
+    const svgLinesTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: path,
+        start: "top 90%",
+        end: "+=270%",
+        // start: "top 80%",
+        // end: "bottom 20%",
+        scrub: false,
+        once: false,
+        pin: false,
+        markers: false,
+      },
+    });
+
+    path.forEach((el) => {
+      svgLinesTL.to(
+        el,
+        3,
+        {
+          strokeDashoffset: 0,
+          strokeDasharray: el.getTotalLength(),
+          ease: "expo.inOut",
+        },
+        "start"
+      );
+    });
+    const image = document.querySelector("#curveTwo_image0_202_42");
+    svgLinesTL.to(
+      image,
+      1.7,
+      {
+        scale: 1.0,
+        opacity: 1,
+        visibility: "visible",
+        ease: "expo.inOut",
+      },
+      "-=1.9"
+    );
+  }
 
   function heroAnimate() {
     const path = document.querySelectorAll("#curve-hero path");
@@ -155,6 +196,7 @@ $(document).ready(function () {
     //   ease: "expo.inOut",
     // })
   }
+  
 
   function resetElements() {
     const path = document.querySelectorAll("#curve-hero path");
@@ -204,6 +246,21 @@ $(document).ready(function () {
       y: -20,
       opacity: 0,
       rotation: 10,
+    });
+
+    const curveTwoPath = document.querySelectorAll("#curveTwo path");
+    curveTwoPath.forEach((el) => {
+      gsap.set(el, {
+        strokeDashoffset: el.getTotalLength(),
+        strokeDasharray: el.getTotalLength(),
+      });
+    });
+
+    const curveTwoImage = document.querySelector("#curveTwo_image0_202_42");
+    gsap.set(curveTwoImage, {
+      scale: 1.5,
+      opacity: 0,
+      transformOrigin: "50% 50%",
     });
 
   }
