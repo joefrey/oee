@@ -54,11 +54,23 @@ $(document).ready(function () {
       once: true,
       onEnter: function () {
         // const dashedCurve = dashElem.querySelector('.thePath');
+
         gsap.to(el, 1.8, {
           y: 0,
           opacity: 1,
-          ease: "expo.inOut",
-        })
+          visibility: "visible",
+          delay: 0.5,
+          ease: "expo.out",
+          stagger: {
+            amount: 0.3,
+          },
+        });
+        
+        // gsap.to(el, 1.8, {
+        //   y: 0,
+        //   opacity: 1,
+        //   ease: "expo.inOut",
+        // })
       }
     })
   });
