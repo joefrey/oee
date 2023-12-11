@@ -25,6 +25,27 @@ $(document).ready(function () {
       },
     });
   });
+
+  gsap.utils.toArray('.dashed-curve').forEach(function (dashElem) {
+    ScrollTrigger.create({
+      trigger: dashElem,
+      start: "top 80%",
+      end: "bottom 20%",
+      markers: false,
+      once: true,
+      onEnter: function () {
+        const dashedCurve = dashElem.querySelector('.thePath');
+        gsap.to(dashedCurve, 1.8, {
+          strokeDashoffset: -dashedCurve.getTotalLength(),
+          strokeDasharray: dashedCurve.getTotalLength(),
+          ease: "expo.inOut",
+        })
+      }
+    })
+  });
+
+
+
   function getInTouchAnimate() {
     const dashedOverlay = document.querySelector(
       ".dashed_curve__whoweare_getintouch .dash__overlay"
@@ -396,5 +417,20 @@ $(document).ready(function () {
       y: 100,
       opacity: 0,
     });
+
+
+
+    // dashed lines
+    const dashedPaths = document.querySelectorAll(".dashed-curve .thePath");
+    dashedPaths.forEach((el) => {
+      gsap.set(el, {
+        strokeDashoffset: 0,
+        strokeDasharray: dashedCurve.getTotalLength(),
+      });
+    });
+
+
+
+
   }
 });
