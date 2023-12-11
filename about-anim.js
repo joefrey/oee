@@ -62,6 +62,48 @@ $(document).ready(function () {
     );
   }
 
+  function resetElements() {
+    const path = document.querySelectorAll("#curve-hero path");
+    path.forEach((el) => {
+      gsap.set(el, {
+        strokeDashoffset: el.getTotalLength(),
+        strokeDasharray: el.getTotalLength(),
+      });
+    });
+
+    const heroCurveImage = document.querySelector("#image0_301_15");
+    gsap.set(heroCurveImage, {
+      scale: 1.5,
+      opacity: 0,
+      transformOrigin: "50% 50%",
+    });
+
+    // dashed lines
+    const dashedPaths = document.querySelectorAll(".dashed-curve .thePath");
+    dashedPaths.forEach((el) => {
+      gsap.set(el, {
+        strokeDashoffset: 0,
+        strokeDasharray: el.getTotalLength(),
+      });
+    });
+
+    // show animate elements reset
+    const elAnim = document.querySelectorAll(".el-anim");
+    elAnim.forEach((el) => {
+      gsap.set(elAnim, {
+        y: 100,
+        opacity: 0,
+      });
+    });
+
+    const circleGradient = document.querySelector(".circle__gradient");
+    gsap.set(circleGradient, {
+      y: -20,
+      opacity: 0,
+      rotation: 10,
+    });
+    
+  }
 
   // dashed curves
   gsap.utils.toArray('.dashed-curve').forEach(function (dashElem) {
@@ -106,5 +148,7 @@ $(document).ready(function () {
       }
     })
   });
+
+  
 
 });
