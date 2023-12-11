@@ -101,7 +101,7 @@ $(document).ready(function () {
       });
     });
 
-    const heroCurveImage = document.querySelector("#image0_300_2");
+    const heroCurveImage = document.querySelector("#image0_301_15");
     gsap.set(heroCurveImage, {
       scale: 1.5,
       opacity: 0,
