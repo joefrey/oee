@@ -50,7 +50,7 @@ $(document).ready(function () {
         "start"
       );
     });
-    const image = document.querySelector("#image0_300_2");
+    const image = document.querySelector("#image0_301_15");
     svgLinesTL.to(
       image,
       1.7,
