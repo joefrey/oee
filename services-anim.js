@@ -104,7 +104,7 @@ $(document).ready(function () {
         "start"
       );
     });
-    const image = document.querySelector("#curveTwo_image0_202_42");
+    const image = document.querySelector("#image0_202_42");
     svgLinesTL.to(
       image,
       1.7,
@@ -256,7 +256,7 @@ $(document).ready(function () {
       });
     });
 
-    const curveTwoImage = document.querySelector("#curveTwo_image0_202_42");
+    const curveTwoImage = document.querySelector("#image0_202_42");
     gsap.set(curveTwoImage, {
       scale: 1.5,
       opacity: 0,
