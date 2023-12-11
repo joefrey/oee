@@ -65,7 +65,7 @@ $(document).ready(function () {
       "-=1.9"
     );
     const circleGradient = document.querySelector(
-      ".circle__gradient__page_inner"
+      ".circle__gradient"
     );
     svgLinesTL.to(
       circleGradient,
