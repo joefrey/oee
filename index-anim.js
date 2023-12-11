@@ -38,6 +38,8 @@ $(document).ready(function () {
         gsap.to(dashedCurve, 1.8, {
           strokeDashoffset: -dashedCurve.getTotalLength(),
           strokeDasharray: dashedCurve.getTotalLength(),
+          opacity: 1,
+          visibility: visible,
           ease: "expo.inOut",
         })
       }
@@ -426,6 +428,8 @@ $(document).ready(function () {
       gsap.set(el, {
         strokeDashoffset: 0,
         strokeDasharray: el.getTotalLength(),
+        opacity: 0,
+        visibility: hidden,
       });
     });
 
