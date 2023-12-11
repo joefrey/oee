@@ -44,6 +44,27 @@ $(document).ready(function () {
     })
   });
 
+  // show animate elements
+  gsap.utils.toArray('.el-anim').forEach(function (el) {
+    ScrollTrigger.create({
+      trigger: el,
+      start: "top 80%",
+      end: "bottom 20%",
+      markers: false,
+      once: true,
+      onEnter: function () {
+        // const dashedCurve = dashElem.querySelector('.thePath');
+        gsap.to(el, 1.8, {
+          y: 0,
+          autoAlpha: 0,
+          ease: "expo.inOut",
+        })
+      }
+    })
+  });
+
+  
+
   function heroAnimate() {
     const path = document.querySelectorAll("#curve-hero path");
     const svgLinesTL = gsap.timeline({
@@ -156,5 +177,15 @@ $(document).ready(function () {
         strokeDasharray: el.getTotalLength(),
       });
     });
+
+    // show animate elements reset
+    const elAnim = document.querySelectorAll(".el-anim");
+    ashedPaths.forEach((el) => {
+      gsap.set(elAnim, {
+        y: 100,
+        autoAlpha: 0,
+      });
+    });
+
   }
 });
