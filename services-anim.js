@@ -90,6 +90,9 @@ $(document).ready(function () {
         amount: 0.3,
       },
     });
+
+    const heroDashed = document.querySelector('.hero-dashed');
+    gsap.to(heroDashed, {drawSVG: '100%'})
   }
 
   function resetElements() {
@@ -114,5 +117,10 @@ $(document).ready(function () {
       y: 100,
       opacity: 0,
     });
+
+    const heroDashed = document.querySelector('.hero-dashed');
+    gsap.set(heroDashed, {drawSVG: '0%'})
+
+
   }
 });
