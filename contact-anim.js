@@ -146,7 +146,7 @@ $(document).ready(function () {
       });
     });
 
-    const circleGradient = document.querySelector(".circle__gradient");
+    const circleGradient = document.querySelector(".circle__gradient_homepage");
     gsap.set(circleGradient, {
       y: -20,
       opacity: 0,
