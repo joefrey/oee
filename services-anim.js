@@ -146,11 +146,7 @@ $(document).ready(function () {
       opacity: 0,
     });
 
-    const dashedCurve = document.querySelector('#dashed-curve #thePath');
-    gsap.set(dashedCurve, {
-      strokeDashoffset: 0,
-      strokeDasharray: dashedCurve.getTotalLength(),
-    })
+    
 
     // dashed lines
     const dashedPaths = document.querySelectorAll(".dashed-curve .thePath");
