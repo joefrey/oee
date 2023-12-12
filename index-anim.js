@@ -26,7 +26,8 @@ $(document).ready(function () {
     });
   });
 
-  gsap.utils.toArray('.dashed-curve').forEach(function (dashElem) {
+  // dashed curves
+  gsap.utils.toArray(".dashed-curve").forEach(function (dashElem) {
     ScrollTrigger.create({
       trigger: dashElem,
       start: "top 80%",
@@ -34,18 +35,19 @@ $(document).ready(function () {
       markers: false,
       once: true,
       onEnter: function () {
-        const dashedCurve = dashElem.querySelector('.thePath');
+        const dashedCurve = dashElem.querySelector(".thePath");
         gsap.to(dashedCurve, 1.8, {
-          strokeDashoffset: -dashedCurve.getTotalLength(),
+          // strokeDashoffset: -dashedCurve.getTotalLength(),
+          strokeDashoffset: 0,
           strokeDasharray: dashedCurve.getTotalLength(),
-          
+
           ease: "expo.inOut",
-        })
-      }
-    })
+        });
+      },
+    });
   });
 
-
+  // curves with image
 
   function getInTouchAnimate() {
     const dashedOverlay = document.querySelector(
@@ -419,19 +421,14 @@ $(document).ready(function () {
       opacity: 0,
     });
 
-
-
     // dashed lines
     const dashedPaths = document.querySelectorAll(".dashed-curve .thePath");
     dashedPaths.forEach((el) => {
       gsap.set(el, {
-        strokeDashoffset: 0,
+        // strokeDashoffset: 0,
+        strokeDashoffset: el.getTotalLength(),
         strokeDasharray: el.getTotalLength(),
       });
     });
-
-
-
-
   }
 });
