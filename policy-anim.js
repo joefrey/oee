@@ -101,6 +101,15 @@ $(document).ready(function () {
       },
       "-=1.9"
     );
+
+    const navLink = document.querySelectorAll(".nav_link");
+    svgLinesTL.to(
+      navLink,
+      {
+        color: "#fff",
+      },
+      "-=1.4"
+    );
   }
 
   // dashed curves
@@ -200,6 +209,11 @@ $(document).ready(function () {
       y: -20,
       opacity: 0,
       rotation: 10,
+    });
+
+    const navLink = document.querySelectorAll(".nav_link");
+    gsap.set(navLink, {
+      color: "#2C3838",
     });
   }
 });

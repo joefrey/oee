@@ -147,6 +147,15 @@ $(document).ready(function () {
       },
       "-=1.9"
     );
+
+    const navLink = document.querySelectorAll(".nav_link");
+    svgLinesTL.to(
+      navLink,
+      {
+        color: "#fff",
+      },
+      "-=1.4"
+    );
   }
 
   function resetElements() {
@@ -217,6 +226,10 @@ $(document).ready(function () {
       scale: 1.5,
       opacity: 0,
       transformOrigin: "50% 50%",
+    });
+    const navLink = document.querySelectorAll(".nav_link");
+    gsap.set(navLink, {
+      color: "#2C3838",
     });
   }
 
