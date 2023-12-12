@@ -338,7 +338,7 @@ $(document).ready(function () {
       {
         color: "#fff",
       },
-      "-=1.9"
+      "-=1"
     );
     const circleGradient = document.querySelector(".circle__gradient_homepage");
     svgLinesTL.to(
