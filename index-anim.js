@@ -333,9 +333,13 @@ $(document).ready(function () {
       "-=1.9"
     );
     const navLink = document.querySelectorAll(".nav_link");
-    svgLinesTL.to(navLink, {
-      color: "#fff",
-    });
+    svgLinesTL.to(
+      navLink,
+      {
+        color: "#fff",
+      },
+      "-=1.9"
+    );
     const circleGradient = document.querySelector(".circle__gradient_homepage");
     svgLinesTL.to(
       circleGradient,
