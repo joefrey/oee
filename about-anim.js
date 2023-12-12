@@ -15,9 +15,9 @@ $(document).ready(function () {
 
         if (sectionID === "hero") {
           heroAnimate();
-        } else if (sectionID === 'mission') {
+        } else if (sectionID === "mission") {
           missionAnimate();
-        } else if (sectionID === 'section_services') {
+        } else if (sectionID === "section_services") {
           servicesAnimate();
         }
       },
@@ -25,7 +25,6 @@ $(document).ready(function () {
   });
 
   function servicesAnimate() {
-
     const path = document.querySelectorAll("#curveThree path");
     const svgLinesTL = gsap.timeline({
       scrollTrigger: {
@@ -107,7 +106,6 @@ $(document).ready(function () {
       },
       "-=1.9"
     );
-
   }
 
   function heroAnimate() {
@@ -136,7 +134,6 @@ $(document).ready(function () {
         "start"
       );
     });
-
 
     const image = document.querySelector("#image0_301_15");
     svgLinesTL.to(
@@ -221,11 +218,10 @@ $(document).ready(function () {
       opacity: 0,
       transformOrigin: "50% 50%",
     });
-    
   }
 
   // dashed curves
-  gsap.utils.toArray('.dashed-curve').forEach(function (dashElem) {
+  gsap.utils.toArray(".dashed-curve").forEach(function (dashElem) {
     ScrollTrigger.create({
       trigger: dashElem,
       start: "top 80%",
@@ -233,23 +229,23 @@ $(document).ready(function () {
       markers: false,
       once: true,
       onEnter: function () {
-        const dashedCurve = dashElem.querySelector('.thePath');
+        const dashedCurve = dashElem.querySelector(".thePath");
         gsap.to(dashedCurve, 1.8, {
           strokeDashoffset: -dashedCurve.getTotalLength(),
           strokeDasharray: dashedCurve.getTotalLength(),
-          
+
           ease: "expo.inOut",
-        })
-      }
-    })
+        });
+      },
+    });
   });
 
   // show animate elements
-  gsap.utils.toArray('.el-anim').forEach(function (el) {
+  gsap.utils.toArray(".el-anim").forEach(function (el) {
     ScrollTrigger.create({
       trigger: el,
-      start: "top 80%",
-      end: "bottom 20%",
+      start: "top 100%",
+      end: "bottom 0%",
       markers: false,
       once: true,
       onEnter: function () {
@@ -263,11 +259,7 @@ $(document).ready(function () {
             amount: 0.3,
           },
         });
-        
-      }
-    })
+      },
+    });
   });
-
-  
-
 });
