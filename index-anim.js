@@ -37,8 +37,7 @@ $(document).ready(function () {
       onEnter: function () {
         const dashedCurve = dashElem.querySelector(".thePath");
         gsap.to(dashedCurve, 1.8, {
-          strokeDashoffset: -(dashedCurve.getTotalLength() * 2),
-          // strokeDashoffset: 0,
+          strokeDashoffset: -dashedCurve.getTotalLength(),
           strokeDasharray: dashedCurve.getTotalLength(),
 
           ease: "expo.inOut",
@@ -425,8 +424,7 @@ $(document).ready(function () {
     const dashedPaths = document.querySelectorAll(".dashed-curve .thePath");
     dashedPaths.forEach((el) => {
       gsap.set(el, {
-        // strokeDashoffset: 0,
-        strokeDashoffset: el.getTotalLength(),
+        strokeDashoffset: 0,
         strokeDasharray: el.getTotalLength(),
       });
     });
