@@ -48,8 +48,8 @@ $(document).ready(function () {
   gsap.utils.toArray(".el-anim").forEach(function (el) {
     ScrollTrigger.create({
       trigger: el,
-      start: "top 50%",
-      end: "bottom 50%",
+      start: "top 100%",
+      end: "bottom 0%",
       markers: false,
       once: true,
       onEnter: function () {
