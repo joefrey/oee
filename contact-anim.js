@@ -15,15 +15,14 @@ $(document).ready(function () {
 
         if (sectionID === "hero") {
           heroAnimate();
-        } else if (sectionID === 'mission') {
+        } else if (sectionID === "mission") {
           // missionAnimate();
-        } else if (sectionID === 'section_services') {
+        } else if (sectionID === "section_services") {
           // servicesAnimate();
         }
       },
     });
   });
-
 
   function heroAnimate() {
     const path = document.querySelectorAll("#curve-hero path");
@@ -52,7 +51,6 @@ $(document).ready(function () {
       );
     });
 
-
     const image = document.querySelector("#image0_301_15");
     svgLinesTL.to(
       image,
@@ -68,7 +66,7 @@ $(document).ready(function () {
   }
 
   // dashed curves
-  gsap.utils.toArray('.dashed-curve').forEach(function (dashElem) {
+  gsap.utils.toArray(".dashed-curve").forEach(function (dashElem) {
     ScrollTrigger.create({
       trigger: dashElem,
       start: "top 80%",
@@ -76,23 +74,23 @@ $(document).ready(function () {
       markers: false,
       once: true,
       onEnter: function () {
-        const dashedCurve = dashElem.querySelector('.thePath');
+        const dashedCurve = dashElem.querySelector(".thePath");
         gsap.to(dashedCurve, 1.8, {
           strokeDashoffset: -dashedCurve.getTotalLength(),
           strokeDasharray: dashedCurve.getTotalLength(),
-          
+
           ease: "expo.inOut",
-        })
-      }
-    })
+        });
+      },
+    });
   });
 
   // show animate elements
-  gsap.utils.toArray('.el-anim').forEach(function (el) {
+  gsap.utils.toArray(".el-anim").forEach(function (el) {
     ScrollTrigger.create({
       trigger: el,
-      start: "top 80%",
-      end: "bottom 20%",
+      start: "top 100%",
+      end: "bottom 0%",
       markers: false,
       once: true,
       onEnter: function () {
@@ -106,11 +104,9 @@ $(document).ready(function () {
             amount: 0.3,
           },
         });
-        
-      }
-    })
+      },
+    });
   });
-
 
   function resetElements() {
     const path = document.querySelectorAll("#curve-hero path");
@@ -127,7 +123,7 @@ $(document).ready(function () {
       opacity: 0,
       transformOrigin: "50% 50%",
     });
-    
+
     // dashed lines
     const dashedPaths = document.querySelectorAll(".dashed-curve .thePath");
     dashedPaths.forEach((el) => {
@@ -153,4 +149,4 @@ $(document).ready(function () {
       rotation: 10,
     });
   }
-})
+});
