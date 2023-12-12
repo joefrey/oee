@@ -332,6 +332,10 @@ $(document).ready(function () {
       },
       "-=1.9"
     );
+    const navLink = document.querySelectorAll(".nav_link");
+    svgLinesTL.to(navLink, {
+      color: "#fff",
+    });
     const circleGradient = document.querySelector(".circle__gradient_homepage");
     svgLinesTL.to(
       circleGradient,
@@ -427,6 +431,11 @@ $(document).ready(function () {
         strokeDashoffset: 0,
         strokeDasharray: el.getTotalLength(),
       });
+    });
+
+    const navLink = document.querySelectorAll(".nav_link");
+    gsap.set(navLink, {
+      color: "#2C3838",
     });
   }
 });
