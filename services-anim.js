@@ -25,7 +25,7 @@ $(document).ready(function () {
   });
 
   // dashed curves
-  gsap.utils.toArray('.dashed-curve').forEach(function (dashElem) {
+  gsap.utils.toArray(".dashed-curve").forEach(function (dashElem) {
     ScrollTrigger.create({
       trigger: dashElem,
       start: "top 80%",
@@ -33,28 +33,26 @@ $(document).ready(function () {
       markers: false,
       once: true,
       onEnter: function () {
-        const dashedCurve = dashElem.querySelector('.thePath');
+        const dashedCurve = dashElem.querySelector(".thePath");
         gsap.to(dashedCurve, 1.8, {
           strokeDashoffset: -dashedCurve.getTotalLength(),
           strokeDasharray: dashedCurve.getTotalLength(),
-          
+
           ease: "expo.inOut",
-        })
-      }
-    })
+        });
+      },
+    });
   });
 
   // show animate elements
-  gsap.utils.toArray('.el-anim').forEach(function (el) {
+  gsap.utils.toArray(".el-anim").forEach(function (el) {
     ScrollTrigger.create({
       trigger: el,
-      start: "top 80%",
-      end: "bottom 20%",
+      start: "top 50%",
+      end: "bottom 50%",
       markers: false,
       once: true,
       onEnter: function () {
-        // const dashedCurve = dashElem.querySelector('.thePath');
-
         gsap.to(el, 1.8, {
           y: 0,
           opacity: 1,
@@ -65,18 +63,11 @@ $(document).ready(function () {
             amount: 0.3,
           },
         });
-        
-        // gsap.to(el, 1.8, {
-        //   y: 0,
-        //   opacity: 1,
-        //   ease: "expo.inOut",
-        // })
-      }
-    })
+      },
+    });
   });
 
   function serviceAnimate() {
-
     const path = document.querySelectorAll("#curveTwo path");
     const svgLinesTL = gsap.timeline({
       scrollTrigger: {
@@ -145,7 +136,6 @@ $(document).ready(function () {
       );
     });
 
-
     const image = document.querySelector("#image0_301_15");
     svgLinesTL.to(
       image,
@@ -158,9 +148,7 @@ $(document).ready(function () {
       },
       "-=1.9"
     );
-    const circleGradient = document.querySelector(
-      ".circle__gradient"
-    );
+    const circleGradient = document.querySelector(".circle__gradient");
     svgLinesTL.to(
       circleGradient,
       1.7,
@@ -186,17 +174,15 @@ $(document).ready(function () {
         amount: 0.3,
       },
     });
-    
-    
+
     // const dashedCurve = document.querySelector('#dashed-curve #thePath');
     // svgLinesTL.to(dashedCurve, 1.8, {
     //   strokeDashoffset: -dashedCurve.getTotalLength(),
     //   strokeDasharray: dashedCurve.getTotalLength(),
-      // strokeDasharray: '11, 11',
+    // strokeDasharray: '11, 11',
     //   ease: "expo.inOut",
     // })
   }
-  
 
   function resetElements() {
     const path = document.querySelectorAll("#curve-hero path");
@@ -220,8 +206,6 @@ $(document).ready(function () {
       y: 100,
       opacity: 0,
     });
-
-    
 
     // dashed lines
     const dashedPaths = document.querySelectorAll(".dashed-curve .thePath");
@@ -262,6 +246,5 @@ $(document).ready(function () {
       opacity: 0,
       transformOrigin: "50% 50%",
     });
-
   }
 });
