@@ -72,6 +72,20 @@ $(document).ready(function () {
       },
       "-=1.4"
     );
+
+    const circleGradient = document.querySelector(".circle__gradient_homepage");
+    svgLinesTL.to(
+      circleGradient,
+      1.7,
+      {
+        y: 0,
+        opacity: 1,
+        visibility: "visible",
+        rotation: 0,
+        ease: "expo.inOut",
+      },
+      "-=1"
+    );
   }
 
   // dashed curves
